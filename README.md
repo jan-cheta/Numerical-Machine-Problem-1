@@ -1,4 +1,4 @@
-# Numerical-Rounding-Chopping-
+# Numerical-Machine-Problem_1
 
 
 ## Three Functions:
