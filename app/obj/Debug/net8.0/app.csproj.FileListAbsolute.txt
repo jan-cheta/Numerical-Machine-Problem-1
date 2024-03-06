@@ -12,3 +12,18 @@ C:\Users\Cedric\Desktop\VSCode Dir\C#\app\obj\Debug\net8.0\refint\app.dll
 C:\Users\Cedric\Desktop\VSCode Dir\C#\app\obj\Debug\net8.0\app.pdb
 C:\Users\Cedric\Desktop\VSCode Dir\C#\app\obj\Debug\net8.0\app.genruntimeconfig.cache
 C:\Users\Cedric\Desktop\VSCode Dir\C#\app\obj\Debug\net8.0\ref\app.dll
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\bin\Debug\net8.0\app.exe
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\bin\Debug\net8.0\app.deps.json
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\bin\Debug\net8.0\app.runtimeconfig.json
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\bin\Debug\net8.0\app.dll
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\bin\Debug\net8.0\app.pdb
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.AssemblyInfoInputs.cache
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.AssemblyInfo.cs
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.csproj.CoreCompileInputs.cache
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.sourcelink.json
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.dll
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\refint\app.dll
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.pdb
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\app.genruntimeconfig.cache
+C:\Users\Cheta\Desktop\Visual Studio Things\C#\Numerical\Group1_MP1\Numerical-Rounding-Chopping-\app\obj\Debug\net8.0\ref\app.dll

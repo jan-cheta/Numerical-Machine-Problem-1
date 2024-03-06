@@ -1,12 +1,16 @@
 ﻿using System;
+//Please Add this line below because I used Dictionaries for our functions
+using System.Collections.Generic; 
 
 namespace App{
     class Program{
         static void Main(string[] args)
         {
             //Interface 
-            Console.WriteLine("1. Chopping, Cutting");
-            Console.WriteLine("2. Arctan Taylor Series");
+            Console.WriteLine("Choose Function: ");
+            Console.WriteLine("1. Arctan Taylor Series");
+            Console.WriteLine("2. Chopping, Cutting");
+            Console.Write("Choice: ");
             string choice = Console.ReadLine();
 
             switch(choice){
@@ -19,13 +23,39 @@ namespace App{
                     Console.Write("Enter Degree: ");
                     double degree = Convert.ToDouble(Console.ReadLine());
 
-                    //Print Out Approximated Value
+                    //print out approximated value
                     Console.WriteLine("Approx. Value: " + taylorSeriesMake(domain,degree)); 
                     break;
                 case "2":
                     //Chopping and Cutting
+
+                    //input for float and decimal places
                     Console.Write("Enter Float: ");
-                    string trueValue = Console.ReadLine();
+                    double trueValue = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Enter Decimal Places: ");
+                    int demPlaces = Convert.ToInt16(Console.ReadLine());
+
+                    //print out chopped value and errors
+                    double chopped = chopAndRound(Convert.ToString(trueValue), demPlaces)["Chopping"];
+                    decimal chopAE = errorFind(trueValue, chopped)["Absolute Error"];
+                    decimal chopRE = errorFind(trueValue, chopped)["Relative Error"];
+                    Console.WriteLine("--------------Chopping---------------");
+                    Console.WriteLine("Chopped: " + chopped);
+                    Console.WriteLine("Absolute Error: " + chopAE);
+                    Console.WriteLine("Relative Error: " + chopRE + "%");
+
+                    //print out rounded value and errors
+                    double rounded = chopAndRound(Convert.ToString(trueValue), demPlaces)["Rounding"];
+                    decimal roundAE = errorFind(trueValue, rounded)["Absolute Error"];
+                    decimal roundRE = errorFind(trueValue, rounded)["Relative Error"];
+                    Console.WriteLine("--------------Rounding---------------");
+                    Console.WriteLine("Rounded: " + rounded);
+                    Console.WriteLine("Absolute Error: " + roundAE);
+                    Console.WriteLine("Relative Error: " + roundRE + "%");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Choice");
                     break;
             }
 
@@ -34,20 +64,43 @@ namespace App{
             
         }
 
-        static double[] chopAndRound(string decim){
-            double[] chopAndRound = new double[2];
+        static Dictionary<string,double> chopAndRound(string decim, int decPlaces){
+            Dictionary<string, double> chopAndRound = new Dictionary<string, double>();
+            
+            //Chopping Value
             string[] chopString = new string[2];
             try{
                 chopString = decim.Split(".");
-            }catch(Exception e){
+            }catch{
                 chopString[0] = decim;
                 chopString[1] = "00";
             }
-            
+            string choppedDecimal = chopString[1][..decPlaces];
+            double choppedValue = Convert.ToDouble(chopString[0] + "." + choppedDecimal);
+            chopAndRound.Add("Chopping", choppedValue);
 
+            //Rounding Value
+            double roundedValue = Math.Round(Convert.ToDouble(decim),decPlaces);
+            chopAndRound.Add("Rounding", roundedValue);
+            
             return chopAndRound;
         }
 
+        static Dictionary<string,decimal> errorFind(double trueValue, double approxValue){
+            Dictionary<string, decimal> errorFound = new Dictionary<string, decimal>();
+            decimal trueDeciValue = Convert.ToDecimal(trueValue);
+            decimal approxDeciValue = Convert.ToDecimal(approxValue);
+
+            //Find Absolute Error
+            decimal absoluteError = Math.Abs(trueDeciValue - approxDeciValue);
+            errorFound.Add("Absolute Error", absoluteError);
+
+            //Find Relative Error
+            decimal relativeError = (absoluteError/trueDeciValue)*100;
+            errorFound.Add("Relative Error", relativeError);
+
+            return errorFound; 
+        }
         static double taylorSeriesMake(double domain, double degree){
             double taylorSeries = 0;
             if(domain<1 & domain>0){
