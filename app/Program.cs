@@ -118,6 +118,11 @@ namespace App{
                 for(int i = 0; i<=degree; i++){
                     taylorSeries += (Math.Pow(-1,i+1))/(Math.Pow(domain*((2*i)+1),(2*i)+1));
                 }
+            }else{
+                taylorSeries = (-1*(Math.PI*domain))/(2*domain);
+                for(int i = 0; i<=degree; i++){
+                    taylorSeries += (Math.Pow(-1,i+1))/(Math.Pow(domain*((2*i)+1),(2*i)+1));
+                }
             }
             return taylorSeries;
         }
