@@ -114,7 +114,6 @@ namespace App{
                 }
             }else if(domain>=1){
                 taylorSeries = (Math.PI*domain)/(2*domain);
-                Console.WriteLine("big than one");
                 for(int i = 0; i<=degree; i++){
                     taylorSeries += (Math.Pow(-1,i+1))/(Math.Pow(domain*((2*i)+1),(2*i)+1));
                 }
