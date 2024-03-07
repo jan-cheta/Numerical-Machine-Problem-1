@@ -23,8 +23,13 @@ namespace App{
                     Console.Write("Enter Degree: ");
                     double degree = Convert.ToDouble(Console.ReadLine());
 
-                    //print out approximated value
-                    Console.WriteLine("Approx. Value: " + taylorSeriesMake(domain,degree)); 
+                    //print out approximated value and errors
+                    double taylorAV = taylorSeriesMake(domain,degree);
+                    double taylorTV = Math.Atan(domain);
+                    Console.WriteLine("True Value: " + taylorTV);
+                    Console.WriteLine("Approx. Value: " + taylorAV);
+                    Console.WriteLine("Absolute Error: " + errorFind(taylorTV,taylorAV)["Absolute Error"]);
+                    Console.WriteLine("Relative Error: " + errorFind(taylorTV,taylorAV)["Relative Error"] + "%");
                     break;
                 case "2":
                     //Chopping and Cutting
