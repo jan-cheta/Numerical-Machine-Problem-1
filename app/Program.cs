@@ -88,6 +88,7 @@ namespace App{
             double roundedValue = Math.Round(Convert.ToDouble(decim),decPlaces);
             chopAndRound.Add("Rounding", roundedValue);
             
+            //return Dict
             return chopAndRound;
         }
 
